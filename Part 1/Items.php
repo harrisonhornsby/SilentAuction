@@ -1,8 +1,8 @@
 <html>
 <head>
-<script type="text/javascript" src="js/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -29,33 +29,66 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
+    <!--Item entry form-->
+    <div class="container">
+        <button type="button" class="btn" data-toggle="collapse" data-target="#divCollapse">Add New Item</button>
+        <div id="divCollapse" class="collapse">
+        <h2>Item Entry Form</h2>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Description</label>
+            <div class="col-10">
+                <input class="form-control" type="text" value="" id="example-text-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Retail Value</label>
+            <div class="col-10">
+                <input class="form-control" type="text" value="" id="example-text-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Donor Id</label>
+            <div class="col-10">
+                <input class="form-control" type="text" value="" id="example-text-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Lot Id</label>
+            <div class="col-10">
+                <input class="form-control" type="text" value="" id="example-text-input">
+            </div>
+        </div>
+        </br>
+            <button type="submit" class="btn btn-primary">Add Item</button>
+        </div>
+        </div>
 
 <div class="container">
-<table class="table">
+<table class="table table-hover">
   <thead class="thead-inverse">
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+        <th>Description</th>
+        <th>Retail Value</th>
+        <th>Donor Id</th>
+        <th>Lot Id</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
+            <td>Some Description</td>
+        <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
+              <td>Some Description</td>
+        <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
+        <td>Some Description</td>
+              <td>Larry</td>
       <td>the Bird</td>
       <td>@twitter</td>
     </tr>
