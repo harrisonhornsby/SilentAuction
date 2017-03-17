@@ -1,8 +1,8 @@
 <html>
 <head>
-<script type="text/javascript" src="js/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -31,70 +31,72 @@
 
 <!--Donor entry form-->
 <div class="container">
-<h2>Donor Entry Form</h2>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Business Name</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Contact Name</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Contact Email</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Contact Title</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Address</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">City</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">State</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Zip Code</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">Tax Receipt</label>
-  <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-</br>
-  <button type="submit" class="btn btn-primary">Create Donor</button>
-</div>
-</div>
+<button type="button" class="btn" data-toggle="collapse" data-target="#divCollapse">Add New Donor</button>
+<div id="divCollapse" class="collapse">
 
-<div>
+    <h2>Donor Entry Form</h2>
+<div id="collapseForm" class="form-group row">
+
+      <label for="example-text-input" class="col-2 col-form-label">Business Name</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Contact Name</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Contact Email</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Contact Title</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Address</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">City</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">State</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Zip Code</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Tax Receipt</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="example-text-input">
+      </div>
+    </br>
+      <button type="submit" class="btn btn-primary">Create Donor</button>
+    </div>
+</div>
 
 <!-- Donor table / View / Edit-->
 <div class="container">
-<table class="table">
+<table class="table table-hover">
   <thead class="thead-inverse">
     <tr>
       <th>#</th>
