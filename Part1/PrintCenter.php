@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="typeahead.bundle.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2">Business Name</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="businessName"  placeholder="Enter Business Name" required>
+                    <input class="form-control" type="text" name="typeahead"  placeholder="Enter Business Name" required>
                 </div>
             </div>
 
@@ -63,3 +64,13 @@
 </body>
 
 </html>
+
+<script>
+    $(document).ready(function(){
+        $('input.typeahead').typeahead({
+            name: 'typeahead',
+            remote:'search.php?key=%QUERY',
+            limit : 10
+        });
+    });
+</script>
