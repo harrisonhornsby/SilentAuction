@@ -41,8 +41,23 @@
 </nav>
 
 <div class="container">
-    <button type="button" class="btn btn-primary btn-lg btn-block"onclick="window.open('DonationRequest.pdf')">Print Donation Request</button>
-    <button type="button" class="btn btn-primary btn-lg btn-block">Generate Tax Receipt</button>
+    <h2>Print Center</h2>
+    <form class="form-horizontal" method="POST" action="">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Business Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" name="businessName"  placeholder="Enter Business Name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Generate Tax Receipt</button>
+                    <button type="button" onclick="window.open('DonationRequest.pdf')" class="btn btn-default">Generate Donation Request</button>
+
+                </div>
+            </div>
+        </form>
 </div>
 
 </body>
