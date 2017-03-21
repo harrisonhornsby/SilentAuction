@@ -112,8 +112,8 @@ include 'dbconfigSilentAuction.php';
         <th>State</th>
         <th>Zip</th>
         <th>Received Tax Receipt</th>
-        <th>Generate Donation Request</th>
         <th>Generate Tax Receipt</th>
+        <th>Generate Donation Request</th>
         <th>Modify</th>
     </tr>
   </thead>
@@ -147,8 +147,8 @@ include 'dbconfigSilentAuction.php';
                 <td>$State</td>
                 <td>$ZipCode</td>
                 <td>$TaxReceipt</td>
-                <td><a href='GenerateTaxReceipt.php?DonorId=$Id'><span class=\"glyphicon glyphicon-paperclip\"></span></a></td>
-                <td><a href='GenerateDonationRequest.php?DonorId=$Id'><span class=\"glyphicon glyphicon-heart-empty\"></span></a></td>
+                <td><a href='GenerateTaxReceipt.php?DonorId=$Id'><span class=\"glyphicon glyphicon-heart-empty\"></span></a></td>
+                <td><a href='DonationRequest.pdf'><span class=\"glyphicon glyphicon-paperclip\"></span></a></td>
                 <td><a href='ModifyDonor.php?DonorId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
             </tr>";
       }
