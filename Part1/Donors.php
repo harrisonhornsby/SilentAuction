@@ -115,11 +115,18 @@ include 'dbconfigSilentAuction.php';
         <th>Generate Tax Receipt</th>
         <th>Generate Donation Request</th>
         <th>Modify</th>
+        <th>Delete</th>
     </tr>
   </thead>
   <tbody>
   <?php
-  $sql = "SELECT * FROM `Donors`";
+  if(isset($_GET["TaxReceipt"]))
+  {
+      $sql = "SELECT * FROM `Donors` WHERE `TaxReceipt` = 0";
+  }
+  else{
+      $sql = "SELECT * FROM `Donors`";
+  }
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -150,6 +157,7 @@ include 'dbconfigSilentAuction.php';
                 <td><a href='GenerateTaxReceipt.php?DonorId=$Id'><span class=\"glyphicon glyphicon-heart-empty\"></span></a></td>
                 <td><a href='DonationRequest.pdf'><span class=\"glyphicon glyphicon-paperclip\"></span></a></td>
                 <td><a href='ModifyDonor.php?DonorId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
+                <td><a href='DeleteDonor.php?DonorId=$Id'<span class=\"glyphicon glyphicon-trash\"></span></a></td>
             </tr>";
       }
   }
@@ -157,6 +165,13 @@ include 'dbconfigSilentAuction.php';
   ?>
 </tbody>
 </table>
+    <form class="form-horizontal" action="Donors.php" method="get">
+        <input type="hidden" value="0" name="TaxReceipt">
+            <button type="submit">Display Donors With No Tax Receipt</button>
+    </form>
+    <form class ="form-horizontal" action="Donors.php" method="get">
+        <button type="submit">Display All Donors</button>
+    </form>
 </div>
 </body>
 </html>
