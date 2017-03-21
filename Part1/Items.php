@@ -83,6 +83,8 @@ include 'dbconfigSilentAuction.php';
                 <th>Donor Id</th>
                 <th>Lot Id</th>
                 <th>Modify</th>
+                <th>Delete</th>
+
             </tr>
             </thead>
             <tbody>
@@ -105,6 +107,7 @@ include 'dbconfigSilentAuction.php';
                 <td>$DonorId</td>
                 <td>$LotId</td>
                 <td><a href='ModifyItem.php?ItemId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
+                <td><a href='DeleteItem.php?ItemId=$Id'<span class=\"glyphicon glyphicon-trash\"></span></a></td>
                 </tr>";
                 }
             }
