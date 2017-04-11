@@ -1,5 +1,8 @@
 <?php
+require_once('mpdf60/mpdf.php');
 include 'dbconfigSilentAuction.php';
+$mpdf = new mPDF();
+
 $DonorId = $_GET["DonorId"];
 $sql = "SELECT `BusinessName` FROM `Donors` WHERE Id = $DonorId";
 $result = $conn->query($sql);
@@ -9,6 +12,7 @@ $BusinessName = $row["BusinessName"];
 $sql = "SELECT `Description`,`RetailValue` FROM `Items` WHERE DonorId = $DonorId";
 $result = $conn->query($sql);
 ?>
+
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
