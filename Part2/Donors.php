@@ -142,6 +142,7 @@ include 'dbconfigSilentAuction.php';
         $State = $row["State"];
         $ZipCode = $row["ZipCode"];
         $TaxReceipt = $row["TaxReceipt"];
+        if($TaxReceipt==0) $TaxReceipt = "No"; else $TaxReceipt = "Yes";
 
     echo    "<tr>
                 <td>$Id</td>
