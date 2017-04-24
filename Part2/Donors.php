@@ -28,9 +28,6 @@ include 'dbconfigSilentAuction.php';
 			<li class="active"><a href="Donors.php">Donors <span class="sr-only">(current)</span></a></li>
 			<li><a href="Items.php">Items</a></li>
               <li><a href="PrintCenter.php">Print Center</a></li>
-			  <li><a href="Lots.php">Lots</a></li>
-			<li><a href="Category.php">Category</a></li>
-			 <li><a href="BiddingForm.php">Bidding Sheet</a></li>
 
           </ul>
 		</div><!-- /.navbar-collapse -->
@@ -157,8 +154,8 @@ include 'dbconfigSilentAuction.php';
                 <td>$State</td>
                 <td>$ZipCode</td>
                 <td>$TaxReceipt</td>
-                <td><a href='GenerateTaxReceipt.php?DonorId=$Id'><span class=\"glyphicon glyphicon-heart-empty\"></span></a></td>
-                <td><a href='DonationRequest.pdf'><span class=\"glyphicon glyphicon-paperclip\"></span></a></td>
+                <td><a href='GenerateTaxReceiptPdf.php?DonorId=$Id'><span class=\"glyphicon glyphicon-heart-empty\"></span></a></td>
+                <td><a href='GenerateDonationRequestPdf.php?DonorId=$Id'><span class=\"glyphicon glyphicon-paperclip\"></span></a></td>
                 <td><a href='ModifyDonor.php?DonorId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
                 <td><a href='DeleteDonor.php?DonorId=$Id'<span class=\"glyphicon glyphicon-trash\"></span></a></td>
             </tr>";

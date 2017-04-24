@@ -43,9 +43,6 @@ $row = $result->fetch_assoc();
             <ul class="nav navbar-nav">
                 <li><a href="Donors.php">Donors <span class="sr-only">(current)</span></a></li>
                 <li class="active"><a href="Items.php">Items</a></li>
-				<li><a href="PrintCenter.php">Print Center</a></li>
-				<li><a href="Lots.php">Lots</a></li>
-				<li><a href="Category.php">Category</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

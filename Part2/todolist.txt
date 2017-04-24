@@ -1,0 +1,3 @@
+-Multi select for donation request and tax receipt
+-donation request and tax receipt should display contact name and address at the top, in theory you should be able to fold the docs to mail them
+-assigning lot number is not part 1 requirement
