@@ -36,6 +36,9 @@
                 <li><a href="Donors.php">Donors</a></li>
                 <li><a href="Items.php">Items</a></li>
                 <li class="active"><a href="PrintCenter.php">Print Center</a></li>
+      <li><a href="Lots.php">Lots</a></li>
+      <li><a href="Category.php">Category</a></li>
+      <li><a href="BiddingForm.php">Bidding Sheet</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

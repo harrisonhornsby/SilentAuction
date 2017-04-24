@@ -30,7 +30,7 @@ include 'dbconfigSilentAuction.php';
 		  <ul class="nav navbar-nav">
 			<li><a href="Donors.php">Donors</a></li>
 			<li><a href="Items.php">Items</a></li>
-              <li><a href="PrintCenter.php">Print Center</a></li>
+      <li><a href="PrintCenter.php">Print Center</a></li>
 			 <li class="active"><a href="Lots.php">Lots<span class="sr-only">(current)</span></a></li>
 			<li><a href="Category.php">Category</a></li>
 			 <li><a href="BiddingForm.php">Bidding Sheet</a></li>
