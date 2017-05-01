@@ -1,6 +1,6 @@
 <?php
 /**
- * Author: Bryan Moore dkkkkkkkkkkkk
+ * Author: Bryan Moore dkkkkkkkkkkkk adfad
  */
 include 'dbconfigSilentAuction.php'; //Configure and create DB connection
 
