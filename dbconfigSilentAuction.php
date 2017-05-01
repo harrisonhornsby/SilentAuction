@@ -1,8 +1,8 @@
 <?php
-$servername = "db78a.pair.com";
-$username = "1033872_2";
-$password = "redteam17";
-$dbname = "harrisonhornsby_SilentAcutionSystemDb";
+$servername = "db98a.pair.com";
+$username = "1033872_5_w";
+$password = "puZBpviF";
+$dbname = "harrisonhornsby_silentauction2";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
