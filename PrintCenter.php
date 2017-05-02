@@ -48,27 +48,18 @@
 <div class="container">
     <h2>Print Center</h2>
     <form class="form-horizontal" method="POST" action="">
-            <div class="form-group">
-                <label class="control-label col-sm-2">Business Name</label>
-                <div class="col-sm-10">
-                    <input class="form-control" type="text" name="typeahead"  placeholder="Enter Business Name" required>
-                </div>
-            </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">Generate Tax Receipt</button>
                     <button type="button" onclick="window.open('DonationRequest.pdf')" class="btn btn-default">Generate Donation Request</button>
+					<button type="submit" class="btn btn-default" onclick="location.href = 'PrintBiddingSheet.php'">Print Bidding Sheet</button>
+					<button type="submit" class="btn btn-default" onclick="location.href = 'BidderForm.php'">Print Bidder Form</button>
 
                 </div>
             
 			</div>
-			
-			
-			 
-			<p><a href="PrintBiddingSheet.php">Print Bidding Sheet</a></p>
-			<p><a href="BidderForm.php">Print Bidder Form</a></p>
-			
+			            
         </form>
 </div>
 

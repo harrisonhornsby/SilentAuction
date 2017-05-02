@@ -39,11 +39,10 @@ include 'dbconfigSilentAuction.php';
 	
 				<!--Item entry form-->
     <div class="container">
-        <button type="button" class="btn" data-toggle="collapse" data-target="#divCollapse">Search For Bidder</button>
        
             <form class="form-horizontal" method="POST" action="SearchBidder.php">
                 <div class="form-group">
-                    <label class="control-label col-sm-2">Bidder Number</label>
+                    <label class="control-label col-sm-2">Search by Bidder Number</label>
                     <div class="col-sm-10">
                         <input class="form-control" type="text" name="Id" pattern="[0-9]{3}" title="Must Be a 3 digit number"  placeholder="Enter Bidder Number" required>
                     </div>
