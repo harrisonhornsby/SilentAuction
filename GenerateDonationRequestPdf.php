@@ -70,7 +70,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p6 ft0"><SPAN class="ft2">-</SPAN><SPAN class="ft3">Taylor PTA Facbook</SPAN></P>
 <P class="p6 ft0"><SPAN class="ft2">-</SPAN><SPAN class="ft3">Marketing posters placed throughout the community</SPAN></P>
 <P class="p8 ft0">&nbsp;&nbsp;&nbsp;&nbsp;If you would like to participate in our Auction, Please complete the enclosed Contribution Agreement and return it in the enclosed envelope by April 25, 2014, in order to be included in the Auction Program. If you have any questions, or need additional information, please feel free to contact me:</P>
-<P class="p0 ft0">XXX (home), XXX (cell) or <A href="mailto:tamarahai@yahoo.com"><SPAN class="ft4">XXXXXXXXXXXXX</SPAN></A><A href="mailto:tamarahai@yahoo.com">.</A></P>
+<P class="p0 ft0">757-675-5646 (home), 757-678-9090 (cell) or <A href="mailto:tamarahai@yahoo.com"><SPAN class="ft4">800-345-6789</SPAN></A><A href="mailto:tamarahai@yahoo.com">.</A></P>
 <P class="p9 ft0">Thank you in advance for your consideration of this request. We greatly appreciate your generosity.</P>
 <P class="p10 ft0">Sincerely,</P>
 <P class="p11 ft0">Tamara Haines</P>
