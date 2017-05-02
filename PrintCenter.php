@@ -53,8 +53,8 @@
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">Generate Tax Receipt</button>
                     <button type="button" onclick="window.open('DonationRequest.pdf')" class="btn btn-default">Generate Donation Request</button>
-					<button type="submit" class="btn btn-default" onclick="location.href = 'PrintBiddingSheet.php'">Print Bidding Sheet</button>
-					<button type="submit" class="btn btn-default" onclick="location.href = 'BidderForm.php'">Print Bidder Form</button>
+					<button type="button" class="btn btn-default" onclick="location.href = 'PrintBiddingSheet.php'">Print Bidding Sheet</button>
+					<button type="button" class="btn btn-default" onclick="location.href = 'BidderForm.php'">Print Bidder Form</button>
 
                 </div>
             
