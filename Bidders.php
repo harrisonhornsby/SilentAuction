@@ -164,7 +164,7 @@ include 'dbconfigSilentAuction.php';
                 <td>$email</td>
 				<td><a href='LotsWon.php?BidderId=$Id'><span class=\"glyphicon glyphicon-certificate\"></span></a></td>
                 <td><a href='ModifyBidder.php?BidderId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
-                <td><a href='DeleteBidder.php?BidderId=$Id'><span class=\"glyphicon glyphicon-trash\"></span></a></td>
+                <td><a href='DeleteBidder.php?BidderId=$Id' onclick=\"return confirm('Are you sure you want to delete this Bidder?');\"><span class=\"glyphicon glyphicon-trash\"></span></a></td>
 				
 				
 				

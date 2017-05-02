@@ -110,7 +110,7 @@ include 'dbconfigSilentAuction.php';
 				<td><a href='SelectImage.php?Description=$Description'><span class=\"glyphicon glyphicon-picture\"></span></a></td>
 				
                 <td><a href='ModifyLot.php?LotId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
-                <td><a href='DeleteLot.php?LotId=$Id'<span class=\"glyphicon glyphicon-trash\"></span></a></td>
+                <td><a href='DeleteLot.php?LotId=$Id' onclick=\"return confirm('Are you sure you want to delete this Lot?');\"><span class=\"glyphicon glyphicon-trash\"></span></a></td>
                 </tr>";
                 }
             }
