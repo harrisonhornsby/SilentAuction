@@ -84,13 +84,13 @@ include 'dbconfigSilentAuction.php';
             <div class="form-group">
                 <label class="control-label col-sm-2">Cell Number</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="cellNumber" pattern="[0-9]{10}" title="Must Be a 10 digit number no spaces or dashes" placeholder="Enter Cell Number" required>
+                    <input class="form-control" type="text" name="cellNumber" pattern="^\d{3}-\d{3}-\d{4}$" title="Phone Number (format: xxx-xxx-xxxx)" placeholder="Enter Cell Number" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2">Home Number</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="homeNumber"  placeholder="Enter Home Number" required>
+                    <input class="form-control" type="text" name="homeNumber"  placeholder="Enter Home Number" title="Phone Number (format: xxx-xxx-xxxx)" pattern="^\d{3}-\d{3}-\d{4}$" required>
                 </div>
             </div>
             <div class="form-group">

@@ -13,7 +13,7 @@ include 'dbconfigSilentAuction.php';
 </head>
 
 <body>
-	<nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -29,12 +29,13 @@ include 'dbconfigSilentAuction.php';
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
-			<li><a href="Donors.php">Donors</a></li>
+		  <li><a href="Donors.php">Donors</a></li>
 			<li><a href="Items.php">Items</a></li>
               <li><a href="PrintCenter.php">Print Center</a></li>
-			  <li class="active"><a href="Lots.php">Lots<span class="sr-only">(current)</span></a></li>
+			  <li class="active"><a href="Lots.php">Lots</a></li>
 			<li><a href="Category.php">Category</a></li>
-			 <li><a href="BiddingForm.php">Bidding Sheet</a></li>
+			 <li><a href="Bidders.php">Bidders<span class="sr-only">(current)</span></a><li>
+
           </ul>
 		</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -90,7 +91,7 @@ include 'dbconfigSilentAuction.php';
         </table>
     </div>
 
-	<h2><center><a href="ViewImage.php">Clicke Here to View Lot Image</a></center></h2>
+	<h2><center><a href="ViewImage.php">Click Here to View Lot Image</a></center></h2>
 	
 	
 	

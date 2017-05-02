@@ -10,7 +10,7 @@ include 'dbconfigSilentAuction.php'; //Configure and create DB connection
 $description = $_POST["description"];
 $retailValue = $_POST["retailValue"];
 $donorId = $_POST["donorId"];
-$lotId = "1";
+$lotId = $_POST["lotId"];
 
 
 $stmt = $conn->prepare("INSERT INTO `Items` (`description`, `retailValue`, `donorId`, lotId ) VALUES (?, ?, ?, ?)");
