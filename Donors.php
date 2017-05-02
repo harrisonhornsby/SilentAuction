@@ -82,13 +82,13 @@ include 'dbconfigSilentAuction.php';
             <div class="form-group">
                 <label class="control-label col-sm-2">State</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="state" placeholder="Enter State" required>
+                    <input class="form-control" type="text" name="state" placeholder="Enter State" required pattern="[a-zA-Z]{2}" title="Please use a two letter state abbreviation. ex. VA">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2">Zip</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="zip" placeholder="Enter Zip" required>
+                    <input class="form-control" type="number" name="zip" placeholder="Enter Zip" required pattern="[0-9]{3,5}" title="Please use a five digit zip code.">
                 </div>
             </div>
             <div class="form-group">
