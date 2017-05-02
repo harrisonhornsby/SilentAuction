@@ -14,12 +14,12 @@ $address = $_POST["address"];
 $cellNumber = $_POST["cellNumber"];
 $homeNumber = $_POST["homeNumber"];
 $email = $_POST["email"];
-$paid = $_POST["paid"];
 
 
 
-$stmt = $conn->prepare("UPDATE `Bidder` SET `Id` = ?, `Name` = ?, `Address` = ?, `CellNumber` = ?, `HomeNumber` = ?,`Email` = ?,`Paid` = ? WHERE `Bidder`.`Id` = $BidderId");
-$stmt->bind_param("isssssi", $Id,$name,$address,$cellNumber,$homeNumber,$email,$paid);
+
+$stmt = $conn->prepare("UPDATE `Bidder` SET `Id` = ?, `Name` = ?, `Address` = ?, `CellNumber` = ?, `HomeNumber` = ?,`Email` = ? WHERE `Bidder`.`Id` = $BidderId");
+$stmt->bind_param("isssss", $Id,$name,$address,$cellNumber,$homeNumber,$email);
 
 $stmt->execute();
 $conn->close();

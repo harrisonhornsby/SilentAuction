@@ -30,7 +30,6 @@ include 'dbconfigSilentAuction.php';
               <li><a href="PrintCenter.php">Print Center</a></li>
 			  <li><a href="Lots.php">Lots</a></li>
 			<li><a href="Category.php">Category</a></li>
-			 <li><a href="BiddingForm.php">Bidding Sheet</a></li>
 			 <li><a href="Bidders.php">Bidders<span class="sr-only">(current)</span></a><li>
 
           </ul>
@@ -52,6 +51,7 @@ include 'dbconfigSilentAuction.php';
 		<th>Home Number</th>
         <th>Contact Email</th>
 		<th>Lots Won</th>
+		<th>Description</th>
 		<th>Paid</th>
 		<th>Delivered</th>
 

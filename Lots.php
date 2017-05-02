@@ -33,7 +33,6 @@ include 'dbconfigSilentAuction.php';
               <li><a href="PrintCenter.php">Print Center</a></li>
 			 <li class="active"><a href="Lots.php">Lots<span class="sr-only">(current)</span></a></li>
 			<li><a href="Category.php">Category</a></li>
-			 <li><a href="BiddingForm.php">Bidding Sheet</a></li>
 			 <li><a href="Bidders.php">Bidders</a><li>
           </ul>
 		</div><!-- /.navbar-collapse -->
@@ -48,7 +47,7 @@ include 'dbconfigSilentAuction.php';
                 <div class="form-group">
                     <label class="control-label col-sm-2">Description</label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="description"  placeholder="Enter Lot Description" required>
+                        <input class="form-control" type="text" name="description" pattern="[a-zA-Z\s]{0,}" title="Letters only"  placeholder="Enter Lot Description" required>
                     </div>
                 </div>
                 <div class="form-group">

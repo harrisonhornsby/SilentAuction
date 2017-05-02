@@ -40,6 +40,7 @@ $row = $result->fetch_assoc();
 			<li><a href="PrintCenter.php">Print Center</a></li>
 			<li><a href="Lots.php">Lots</a></li>
 			<li><a href="Category.php">Category</a></li><span class="sr-only">(current)</span></a></li>
+			<li><a href="Bidders.php">Bidders</a><li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

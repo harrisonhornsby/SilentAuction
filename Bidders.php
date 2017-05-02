@@ -27,16 +27,37 @@ include 'dbconfigSilentAuction.php';
 		  <ul class="nav navbar-nav">
 		  <li><a href="Donors.php">Donors</a></li>
 			<li><a href="Items.php">Items</a></li>
-       <li><a href="PrintCenter.php">Print Center</a></li>
+              <li><a href="PrintCenter.php">Print Center</a></li>
 			  <li><a href="Lots.php">Lots</a></li>
 			<li><a href="Category.php">Category</a></li>
-			 <li><a href="BiddingForm.php">Bidding Sheet</a></li>
 			 <li class="active"><a href="Bidders.php">Bidders<span class="sr-only">(current)</span></a><li>
 
           </ul>
 		</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+	
+				<!--Item entry form-->
+    <div class="container">
+        <button type="button" class="btn" data-toggle="collapse" data-target="#divCollapse">Search For Bidder</button>
+       
+            <form class="form-horizontal" method="POST" action="SearchBidder.php">
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Bidder Number</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" name="Id" pattern="[0-9]{3}" title="Must Be a 3 digit number"  placeholder="Enter Bidder Number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
 
 <!--Donor entry form-->
 <div class="container">
@@ -46,13 +67,13 @@ include 'dbconfigSilentAuction.php';
             <div class="form-group">
                 <label class="control-label col-sm-2">Bidder Number</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="Id"  placeholder="Enter Bidder Number" required>
+                    <input class="form-control" type="text" name="Id" pattern="[0-9]{3}" title="Must Be a 3 digit number"  placeholder="Enter Bidder Number" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2">Name</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="name" placeholder="Enter Name" required>
+                    <input class="form-control" type="text" name="name" pattern="[a-zA-Z\s]{0,}" title="Letters only" placeholder="Enter Name" required>
                 </div>
             </div>
             <div class="form-group">
@@ -64,13 +85,13 @@ include 'dbconfigSilentAuction.php';
             <div class="form-group">
                 <label class="control-label col-sm-2">Cell Number</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="cellNumber" placeholder="Enter Cell Number" required>
+                    <input class="form-control" type="text" name="cellNumber" pattern="[0-9]{10}" title="Must Be a 10 digit number no spaces or dashes" placeholder="Enter Cell Number" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2">Home Number</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="homeNumber" placeholder="Enter Home Number" required>
+                    <input class="form-control" type="text" name="homeNumber"  placeholder="Enter Home Number" required>
                 </div>
             </div>
             <div class="form-group">
@@ -79,12 +100,7 @@ include 'dbconfigSilentAuction.php';
                     <input class="form-control" type="email" name="email" placeholder="Enter email" required>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Paid</label>
-                <div class="col-sm-10">
-                    <input class="form-control" type="text" name="paid" placeholder="Has bidder paid?" required>
-                </div>
-            </div>
+
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
@@ -94,6 +110,9 @@ include 'dbconfigSilentAuction.php';
         </form>
     </div>
 </div>
+
+
+
 
 <!-- Donor table / View / Edit-->
 <div class="container">
@@ -145,7 +164,10 @@ include 'dbconfigSilentAuction.php';
                 <td>$email</td>
 				<td><a href='LotsWon.php?BidderId=$Id'><span class=\"glyphicon glyphicon-certificate\"></span></a></td>
                 <td><a href='ModifyBidder.php?BidderId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
-                <td><a href='DeleteBidder.php?BidderId=$Id'<span class=\"glyphicon glyphicon-trash\"></span></a></td>
+                <td><a href='DeleteBidder.php?BidderId=$Id'><span class=\"glyphicon glyphicon-trash\"></span></a></td>
+				
+				
+				
             </tr>";
       }
   }

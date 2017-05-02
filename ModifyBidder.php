@@ -44,6 +44,7 @@ $row = $result->fetch_assoc();
 			<li><a href="PrintCenter.php">Print Center</a></li>
 			<li><a href="Lots.php">Lots</a></li><span class="sr-only">(current)</span></a></li>
 			<li><a href="Category.php">Category</a></li>
+			 <li><a href="Bidders.php">Bidders</a><li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -51,22 +52,24 @@ $row = $result->fetch_assoc();
 
 <!--Lot entry form-->
 <div class="container">
-    <h2>Modify Lot</h2>
+    <h2>Modify Bidder</h2>
     <form class="form-horizontal" method="POST" action="UpdateBidder.php?BidderId=<?php echo $BidderId ?>">
             <div class="form-group">
                 <label class="control-label col-sm-2">Bidder Number</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="number" name="Id"  value="<?php echo "$Id" ?>" required>
+                    <input class="form-control" type="text" name="Id" pattern="[0-9]{3}" title="Must Be a 3 digit number" value="<?php echo "$Id" ?>" required>
                 </div>
             </div>
+			
+		
             <div class="form-group">
                 <label class="control-label col-sm-2">Name</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="name" value="<?php echo $name ?>"  required>
+                    <input class="form-control" type="text" name="name" pattern="[a-zA-Z\s]{0,}" title="Letters only" value="<?php echo $name ?>"  required>
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2">Address</label>
+                <label class="control-label col-sm-2">Street Address</label>
                 <div class="col-sm-10">
                     <input class="form-control" type="text" name="address" value="<?php echo $address ?>"  required>
                 </div>
@@ -75,7 +78,7 @@ $row = $result->fetch_assoc();
             <div class="form-group">
                 <label class="control-label col-sm-2">Cell Number</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="cellNumber" value="<?php echo $cellNumber ?>"  required>
+                    <input class="form-control" type="text" name="cellNumber" pattern="[0-9]{10}" title="Must Be a 10 digit number no spaces or dashes"  value="<?php echo $cellNumber ?>"  required>
                 </div>
             </div>
 			
@@ -83,7 +86,7 @@ $row = $result->fetch_assoc();
             <div class="form-group">
                 <label class="control-label col-sm-2">Home Number</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="homeNumber" value="<?php echo $homeNumber ?>"  required>
+                    <input class="form-control" type="text" name="homeNumber" pattern="[0-9]{10}" title="Must Be a 10 digit number no spaces or dashes" value="<?php echo $homeNumber ?>"  required>
                 </div>
             </div>
             <div class="form-group">

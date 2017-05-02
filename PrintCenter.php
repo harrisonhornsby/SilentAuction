@@ -38,7 +38,6 @@
               <li class="active"><a href="PrintCenter.php">Print Center</a></li>
 			  <li><a href="Lots.php">Lots</a></li>
 			<li><a href="Category.php">Category</a></li>
-			 <li><a href="BiddingForm.php">Bidding Sheet</a></li>
 			 <li><a href="Bidders.php">Bidders<span class="sr-only">(current)</span></a><li>
 
           </ul>
@@ -68,6 +67,7 @@
 			
 			 
 			<p><a href="PrintBiddingSheet.php">Print Bidding Sheet</a></p>
+			<p><a href="BidderForm.php">Print Bidder Form</a></p>
 			
         </form>
 </div>

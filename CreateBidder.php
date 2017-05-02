@@ -10,7 +10,7 @@ $address = $_POST["address"];
 $cellNumber = $_POST["cellNumber"];
 $homeNumber = $_POST["homeNumber"];
 $email = $_POST["email"];
-$paid = $_POST["paid"];
+
 /*
 echo "$Id</br>";
 echo "$name</br>";
@@ -21,9 +21,9 @@ echo "$email</br>";
 echo "$paid</br>";
 */
 
-$stmt = $conn->prepare("INSERT INTO `Bidder` (`Id`, `Name`, `Address`, `CellNumber`, `HomeNumber`, `Email`, `Paid`) VALUES (?,?,?,?,?,?,?)");
+$stmt = $conn->prepare("INSERT INTO `Bidder` (`Id`, `Name`, `Address`, `CellNumber`, `HomeNumber`, `Email`) VALUES (?,?,?,?,?,?)");
 
-$stmt->bind_param("isssssi", $Id,$name,$address,$cellNumber,$homeNumber,$email,$paid);
+$stmt->bind_param("isssss", $Id,$name,$address,$cellNumber,$homeNumber,$email);
 
 
 $stmt->execute();

@@ -36,11 +36,33 @@ include 'dbconfigSilentAuction.php';
 		</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+	
+				<!--Item entry form-->
+    <div class="container">
+        <button type="button" class="btn" data-toggle="collapse" data-target="#divCollapse">Search For Bidder</button>
+       
+            <form class="form-horizontal" method="POST" action="SearchBidder.php">
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Bidder Number</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" name="Id" pattern="[0-9]{3}" title="Must Be a 3 digit number"  placeholder="Enter Bidder Number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
 <!-- Donor table / View / Edit-->
 <div class="container">
-    <h2>Bidders Winning Lots</h2>
+    <h2>Bidders</h2>
+	<h4><a href="ListNonPayingWinners.php">List All Winning Bidders who haven't paid</a></h4>
+	<h4><a href="ListLotsToDeliver.php">List All Lots which are paid for but not delivered</a></h4>
 <table class="table table-hover">
   <thead class="thead-inverse">
     <tr>
@@ -50,32 +72,21 @@ include 'dbconfigSilentAuction.php';
         <th>Cell Number</th>
 		<th>Home Number</th>
         <th>Contact Email</th>
-		<th>Paid</th>
-		<th>Lot Won</th>
-		<th>Description</th>
-		<th>Winning Bid</th>
-		
+		<th>Lots Won</th>
+        <th>Modify</th>
+        <th>Delete</th>
     </tr>
   </thead>
   <tbody>
   <?php
-  
-  
-  
-  $BidderId = $_GET["BidderId"];
-  $sql = "SELECT Bidder.Id,Bidder.Name,Bidder.Address,Bidder.CellNumber,Bidder.HomeNumber,Bidder.Email,Lot.Paid as 'Paid',Lot.Id as 'Lot Won', Lot.Description as 'Description', Lot.WinningAmount as 'WinningBid' 
-FROM Bidder,Lot 
-WHERE Bidder.Id = Lot.WinningBidderId 
-AND Bidder.Id = $BidderId";
-  $result = $conn->query($sql);
-  
-	$stmt = "SELECT sum(Lot.WinningAmount) as 'Total' FROM Bidder,Lot WHERE Bidder.Id = Lot.WinningBidderId AND Bidder.Id = $BidderId" ;
-	$result1 = $conn->query($stmt);
-	 $row = $result1->fetch_assoc();
-	$total = $row["Total"];
 
-	echo "<h2> Total Amount Due = $ $total</h2>";
-	
+	$BidderId = $_POST["Id"];
+  
+ 
+      $sql = "SELECT * FROM `Bidder` WHERE `Bidder`.`Id`= $BidderId";
+  
+  $result = $conn->query($sql);
+
   if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
@@ -85,10 +96,7 @@ AND Bidder.Id = $BidderId";
         $cellnumber = $row["CellNumber"];
         $homeNumber = $row["HomeNumber"];
         $email = $row["Email"];
-        $paid = $row["Paid"];
-		$LotId = $row["Lot Won"];
-		$Description =$row["Description"];
-		$WinningBid = $row["WinningBid"];
+
 
 
     echo    "<tr>
@@ -98,25 +106,12 @@ AND Bidder.Id = $BidderId";
                 <td>$cellnumber</td>
                 <td>$homeNumber</td>
                 <td>$email</td>
-				<td>$paid</td>
-				<td>$LotId</td>
-				<td>$Description</td>
-				<td>$WinningBid</td>
+				<td><a href='LotsWon.php?BidderId=$Id'><span class=\"glyphicon glyphicon-certificate\"></span></a></td>
+                <td><a href='ModifyBidder.php?BidderId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
+                <td><a href='DeleteBidder.php?BidderId=$Id'<span class=\"glyphicon glyphicon-trash\"></span></a></td>
             </tr>";
       }
   }
-  
-	
-	
-	
-	
-	
-	
-  
-  
-  
-  
-  
   $conn->close();
   
   ?>
@@ -124,6 +119,8 @@ AND Bidder.Id = $BidderId";
 </table>
   
 </div>
+
+
 	
 </body>
 </html>
