@@ -162,7 +162,7 @@ include 'dbconfigSilentAuction.php';
                 <td><a href='GenerateTaxReceiptPdf.php?DonorId=$Id'><span class=\"glyphicon glyphicon-heart-empty\"></span></a></td>
                 <td><a href='GenerateDonationRequestPdf.php?DonorId=$Id'><span class=\"glyphicon glyphicon-paperclip\"></span></a></td>
                 <td><a href='ModifyDonor.php?DonorId=$Id'><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
-                <td><a href='DeleteDonor.php?DonorId=$Id'<span class=\"glyphicon glyphicon-trash\"></span></a></td>
+                <td><a href='DeleteDonor.php?DonorId=$Id'onclick=\"return confirm('Are you sure you want to delete this donor?');\"><span class=\"glyphicon glyphicon-trash\"></span></a></td>
             </tr>";
       }
   }
