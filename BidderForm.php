@@ -8,10 +8,14 @@ require('fpdf/fpdf.php');
 
 $pdf = new FPDF();
 
-
+$pos = 0;
+$bidNumberArray = range(100,999);
+shuffle($bidNumberArray);
 
 for ($counter =0;$counter < 38;$counter++){
-$bidNo = rand(100,999);
+//$bidNo = rand(100,999);
+
+
 
 $pdf->AddPage();
 
@@ -23,7 +27,8 @@ $pdf->SetFont('Arial','B',14);
 $pdf->Cell(10);
 // Centered text in a framed 20*10 mm cell and line break
 $pdf->Write(5,"Bidder Number: ");
-$pdf->Write(5,$bidNo);
+$pdf->Write(5,$bidNumberArray[$pos]);
+
 
 
 $pdf->SetXY(0,40);
@@ -80,10 +85,11 @@ $pdf->SetXY(82,55);
 $pdf->SetFont('Arial','B',14);
 
 // Centered text in a framed 20*10 mm cell and line break
-$pdf->Write(5,$bidNo);
+$pdf->Write(5,$bidNumberArray[$pos]);
+$pos++;
 
 ////////////////////////////
-$bidNo1 = rand(100,999);
+//$bidNo1 = rand(100,999);
 
 $pdf->SetXY(105,20);
 // Set font
@@ -93,7 +99,7 @@ $pdf->Cell(10);
 // Centered text in a framed 20*10 mm cell and line break
 
 $pdf->Write(5,"Bidder Number: ");
-$pdf->Write(5,$bidNo1);
+$pdf->Write(5,$bidNumberArray[$pos]);
 
 $pdf->SetXY(100,40);
 // Set font
@@ -147,10 +153,11 @@ $pdf->SetXY(182,55);
 $pdf->SetFont('Arial','B',14);
 
 // Centered text in a framed 20*10 mm cell and line break
-$pdf->Write(5,$bidNo1);
+$pdf->Write(5,$bidNumberArray[$pos]);
+$pos++;
 
 ////////////////////////////////////////////////////////
-$bidNo2 = rand(100,999);
+//$bidNo2 = rand(100,999);
 
 $pdf->SetXY(0,150);
 // Set font
@@ -159,7 +166,7 @@ $pdf->SetFont('Arial','B',14);
 $pdf->Cell(10);
 // Centered text in a framed 20*10 mm cell and line break
 $pdf->Write(5,"Bidder Number: ");
-$pdf->Write(5,$bidNo2);
+$pdf->Write(5,$bidNumberArray[$pos]);
 
 
 $pdf->SetXY(0,170);
@@ -216,10 +223,11 @@ $pdf->SetXY(82,185);
 $pdf->SetFont('Arial','B',14);
 
 // Centered text in a framed 20*10 mm cell and line break
-$pdf->Write(5,$bidNo2);
+$pdf->Write(5,$bidNumberArray[$pos]);
+$pos++;
  
 		////////////////////////////////////////////////////////
-		$bidNo3 = rand(100,999);
+//		$bidNo3 = rand(100,999);
 		
 $pdf->SetXY(105,150);
 // Set font
@@ -228,7 +236,7 @@ $pdf->SetFont('Arial','B',14);
 $pdf->Cell(10);
 // Centered text in a framed 20*10 mm cell and line break
 $pdf->Write(5,"Bidder Number: ");
-$pdf->Write(5,$bidNo3);
+$pdf->Write(5,$bidNumberArray[$pos]);
 
 
 $pdf->SetXY(100,170);
@@ -283,10 +291,11 @@ $pdf->SetXY(182,185);
 $pdf->SetFont('Arial','B',14);
 
 // Centered text in a framed 20*10 mm cell and line break
-$pdf->Write(5,$bidNo3);
+$pdf->Write(5,$bidNumberArray[$pos]);
+$pos++;
 		
 
-}		
+}
 
 $pdf->Output();
 

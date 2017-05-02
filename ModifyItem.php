@@ -25,31 +25,33 @@ $row = $result->fetch_assoc();
 </head>
 
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="Index.html">Silent Auction</a>
-        </div>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="Index.html">Silent Auction</a>
+		</div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="Donors.php">Donors <span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="Items.php">Items</a></li>
-				<li><a href="PrintCenter.php">Print Center</a></li>
-				<li><a href="Lots.php">Lots</a></li>
-				<li><a href="Category.php">Category</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+		  <li><a href="Donors.php">Donors</a></li>
+			<li class="active"><a href="Items.php">Items</a></li>
+              <li><a href="PrintCenter.php">Print Center</a></li>
+			  <li><a href="Lots.php">Lots</a></li>
+			<li><a href="Category.php">Category</a></li>
+			 <li><a href="Bidders.php">Bidders<span class="sr-only">(current)</span></a><li>
+
+          </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 
 <!--Donor entry form-->
 <div class="container">

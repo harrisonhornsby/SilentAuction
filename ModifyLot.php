@@ -62,21 +62,21 @@ $row = $result->fetch_assoc();
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-sm-2">CategoryId</label>
+            <label class="control-label col-sm-2">Category Id</label>
             <div class="col-sm-10">
                 <input class="form-control" type="text" name="CategoryId" pattern="[0-9]{0,}" title="Must Be a number" value="<?php echo $CategoryId ?>" required>
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-sm-2">WinningBidderId</label>
+            <label class="control-label col-sm-2">Winning Bidder Id</label>
             <div class="col-sm-10">
                 <input class="form-control" type="text" name="WinningBidderId" pattern="[0-9]{0,}" title="Must Be a number" value="<?php echo $WinningBidderId ?>">
             </div>
         </div>
 		<div class="form-group">
-            <label class="control-label col-sm-2">WinningAmount</label>
+            <label class="control-label col-sm-2">Winning Amount</label>
             <div class="col-sm-10">
-                <input class="form-control" type="text" name="WinningAmount" pattern="[0-9]{0,}" title="Must Be a number" value="<?php echo $WinningAmount ?>">
+                <input class="form-control" type="number" name="WinningAmount" pattern="^\d+(\.|\,)\d{2}$" title="Must be a monetary value. Ex. 4.99 or 4" value="<?php echo $WinningAmount ?>">
             </div>
         </div>
 				<div class="form-group">

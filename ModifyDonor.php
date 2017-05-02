@@ -24,28 +24,33 @@ $row = $result->fetch_assoc();
 </head>
 
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="Index.html">Silent Auction</a>
-        </div>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="Index.html">Silent Auction</a>
+		</div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="Donors.php">Donors <span class="sr-only">(current)</span></a></li>
-                <li><a href="Items.php">Items</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+		  <li class="active"><a href="Donors.php">Donors</a></li>
+			<li><a href="Items.php">Items</a></li>
+              <li><a href="PrintCenter.php">Print Center</a></li>
+			  <li><a href="Lots.php">Lots</a></li>
+			<li><a href="Category.php">Category</a></li>
+			 <li><a href="Bidders.php">Bidders<span class="sr-only">(current)</span></a><li>
+
+          </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 
 <!--Donor entry form-->
             <div class="container">
@@ -99,12 +104,21 @@ $row = $result->fetch_assoc();
                     <input class="form-control" type="text" name="zip" value="<?php echo $ZipCode; ?>" required>
                 </div>
             </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label class="control-label col-sm-2">Tax Receipt</label>
                     <div class="col-sm-10">
                         <input class="form-control" type="number" name="taxReceipt" value="<?php echo $TaxReceipt; ?>" required>
                     </div>
-                </div>
+                </div>-->
+				<div class="form-group">
+					  <label class="control-label col-sm-2">Tax Receipt Received</label>
+					  <div class="col-sm-10">
+						Yes <input type="radio" id="taxReceiptYes" name="taxReceipt" value="1" <?php if($TaxReceipt==1) { echo 'checked'; } ?> required>
+                    </div>
+					  <div class="col-sm-10">
+						No <input type="radio" id="taxReceiptNo" name="taxReceipt" value="0" <?php if($TaxReceipt==0) { echo 'checked'; } ?> required>
+                    </div>
+			   </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">Submit</button>
