@@ -164,23 +164,23 @@ include 'dbconfigSilentAuction.php';
                 <div class="form-group">
                     <label class="control-label col-sm-2">Retail Value</label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="retailValue" placeholder="Enter Retail Value" required>
+                        <input class="form-control" type="number" name="retailValue" placeholder="Enter Retail Value, ex. 5.00 or 5" required min="1" step="any" title="Please enter a monetary value">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2">Donor</label>
 						<div class="col-sm-10">
 							<div class="search-box">
-								<input class="form-control" type="text" autocomplete="off" name="donorId" placeholder="Search Donors" required>
+								<input class="form-control" type="text" autocomplete="off" name="donorId" placeholder="Search Existing Donors" required>
 								<div class="result"></div>
 						</div>
 							</div>
                 </div>
 				<div class="form-group">
-                    <label class="control-label col-sm-2">Lot Id</label>
+                    <label class="control-label col-sm-2">Lot Description</label>
 						<div class="col-sm-10">
 							<div class="search-box2">
-								<input class="form-control" type="text" autocomplete="off" name="lotId" placeholder="Search Lots" required>
+								<input class="form-control" type="text" autocomplete="off" name="lotId" placeholder="Search Existing Lots" required>
 								<div class="result2"></div>
 						</div>
 							</div>
